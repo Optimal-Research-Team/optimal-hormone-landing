@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Hormone Program — Optimal Health Clinic</title>
+  <meta name="description" content="A 12-week clinical hormone program for women in perimenopause and menopause. Personalized care from a specialist NP, OHIP-covered bloodwork, body composition testing, and structured follow-up. Barrie, Ontario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green-900: #1a2e1a;
+      --green-800: #243524;
+      --green-700: #2d4a2d;
+      --green-600: #3d6b3d;
+      --green-500: #4a7c4a;
+      --green-400: #6b9e6b;
+      --green-100: #e8f0e8;
+      --cream: #f7f3ed;
+      --cream-dark: #efe9e0;
+      --white: #ffffff;
+      --text-dark: #1a2e1a;
+      --text-body: #3a4a3a;
+      --text-muted: #6b7b6b;
+      --border: #d4cdc2;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-body);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Top Contact Bar ── */
+    .top-bar {
+      background: linear-gradient(135deg, #5a5a5a, #787878);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+    }
+    .top-bar a {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(36, 53, 36, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-logo svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav-brand span {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-family: var(--sans);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-nav-outline {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .btn-nav-outline:hover {
+      background: rgba(255,255,255,0.22);
+    }
+
+    .btn-nav-primary {
+      background: white;
+      color: var(--green-800);
+    }
+    .btn-nav-primary:hover {
+      background: var(--cream);
+    }
+
+    /* ── Sticky CTA Banner ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: var(--green-800);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+    .sticky-cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+    }
+    .sticky-cta .btn-sticky {
+      background: white;
+      color: var(--green-800);
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    /* ── Hero Section ── */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(26, 46, 26, 0.75) 0%,
+        rgba(26, 46, 26, 0.55) 45%,
+        rgba(26, 46, 26, 0.15) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      padding: 80px 60px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .tag-new {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+    }
+
+    .tag-location {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: #a8cfa8;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: white;
+      color: var(--green-800);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-family: var(--sans);
+    }
+    .btn-primary:hover {
+      background: var(--cream);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary-hero {
+      padding: 16px 28px;
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-secondary-hero:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── Section Basics ── */
+    section {
+      padding: 100px 40px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-600);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      color: var(--green-600);
+    }
+
+    .section-subtext {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* ── Problem Section ── */
+    .problem-section {
+      background: var(--cream);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .problem-text h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .problem-text p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .problem-text p strong {
+      color: var(--text-dark);
+    }
+
+    .problem-image {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+
+    .problem-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Symptoms ── */
+    .symptoms-section {
+      background: var(--green-800);
+      color: white;
+    }
+
+    .symptoms-section .section-label {
+      color: var(--green-400);
+    }
+    .symptoms-section .section-heading {
+      color: white;
+    }
+    .symptoms-section .section-heading em {
+      color: #a8cfa8;
+    }
+    .symptoms-section .section-subtext {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .symptoms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 50px;
+    }
+
+    .symptom-card {
+      background: var(--green-800);
+      padding: 36px 30px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .symptom-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .symptom-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #a8cfa8;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .symptom-card h4 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .symptom-card p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.55;
+    }
+
+    /* ── Program Overview ── */
+    .program-section {
+      background: var(--cream);
+    }
+
+    .program-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .program-intro .section-subtext {
+      margin: 0 auto;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--green-400);
+      opacity: 0.3;
+    }
+
+    .timeline-step {
+      position: relative;
+      padding-left: 76px;
+      margin-bottom: 48px;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--green-700);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .timeline-step h4 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .timeline-step p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    .step-detail {
+      margin-top: 10px;
+      font-size: 0.85rem !important;
+      color: var(--text-muted) !important;
+      font-style: italic;
+    }
+
+    /* ── What's Included ── */
+    .included-section {
+      background: white;
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .included-card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: border-color 0.25s ease;
+    }
+    .included-card:hover {
+      border-color: var(--green-400);
+    }
+
+    .included-card h4 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .included-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── Differentiator ── */
+    .diff-section {
+      background: var(--cream);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .diff-image {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+
+    .diff-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .diff-list {
+      list-style: none;
+    }
+
+    .diff-list li {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .diff-list li:last-child {
+      border-bottom: none;
+    }
+
+    .diff-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .diff-check svg {
+      width: 14px;
+      height: 14px;
+      stroke: white;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .diff-list h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .diff-list p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ── Pricing ── */
+    .pricing-section {
+      background: var(--green-800);
+      color: white;
+    }
+
+    .pricing-section .section-heading {
+      color: white;
+      text-align: center;
+    }
+    .pricing-section .section-heading em {
+      color: #a8cfa8;
+    }
+    .pricing-section .section-subtext {
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      margin: 0 auto 50px;
+    }
+
+    .pricing-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 48px 44px;
+      text-align: center;
+    }
+
+    .pricing-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(168, 207, 168, 0.15);
+      border: 1px solid rgba(168, 207, 168, 0.3);
+      color: #a8cfa8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .pricing-amount {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+    }
+
+    .pricing-amount span {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .pricing-note {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+
+    .pricing-features li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-features svg {
+      width: 18px;
+      height: 18px;
+      stroke: #a8cfa8;
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    .btn-pricing {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px 32px;
+      background: white;
+      color: var(--green-800);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-family: var(--sans);
+    }
+    .btn-pricing:hover {
+      background: var(--cream);
+      transform: translateY(-1px);
+    }
+
+    .pricing-fine-print {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+
+    .pricing-comparison {
+      max-width: 600px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+
+    .pricing-comparison p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .pricing-comparison strong {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--cream);
+    }
+
+    .faq-section .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .faq-question:hover {
+      color: var(--green-600);
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 400px;
+      padding-bottom: 24px;
+    }
+
+    .faq-answer p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: var(--cream);
+      text-align: center;
+      padding: 80px 40px 100px;
+    }
+
+    .cta-section .section-heading {
+      margin-bottom: 16px;
+    }
+
+    .cta-section .section-subtext {
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 18px 40px;
+      background: var(--green-700);
+      color: white;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-family: var(--sans);
+    }
+    .btn-cta:hover {
+      background: var(--green-800);
+      transform: translateY(-1px);
+    }
+
+    .cta-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 60px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-images img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--green-800);
+      color: white;
+      padding: 60px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand .nav-logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-col p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      nav {
+        padding: 14px 20px;
+      }
+      .nav-brand span {
+        display: none;
+      }
+      section {
+        padding: 70px 24px;
+      }
+      .hero-content {
+        padding: 60px 24px;
+      }
+      .problem-grid,
+      .diff-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .symptoms-grid {
+        grid-template-columns: 1fr;
+      }
+      .included-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .cta-images {
+        grid-template-columns: 1fr;
+      }
+      .cta-images img {
+        height: 220px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pricing-card {
+        padding: 36px 24px;
+      }
+      .pricing-amount {
+        font-size: 2.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    Call or text us at <a href="tel:4373700291">(437) 370-0291</a> or email us at <a href="mailto:care@beoptimal.ca">care@beoptimal.ca</a> to learn more
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="https://www.beoptimal.ca" class="nav-brand">
+      <div class="nav-logo">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="12" cy="12" r="5.5" fill="white"/>
+          <circle cx="28" cy="12" r="5.5" fill="white"/>
+          <circle cx="12" cy="28" r="5.5" fill="white"/>
+          <circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+      <span>Women's Hormone Program</span>
+    </a>
+    <div class="nav-actions">
+      <a href="tel:4373700291" class="btn-nav btn-nav-outline">Call us</a>
+      <a href="https://book.beoptimal.ca/" class="btn-nav btn-nav-primary">Book a free intro</a>
+    </div>
+  </nav>
+
+  <!-- Sticky Bottom CTA (shows on scroll) -->
+  <div class="sticky-cta" id="stickyCta">
+    <p>Founding patient rate — limited spots</p>
+    <a href="https://book.beoptimal.ca/" class="btn-sticky">Book a free intro</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Woman in a peaceful wellness setting">
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="tag tag-new">Now Enrolling</span>
+        <span class="tag tag-location">Barrie, Ontario</span>
+      </div>
+      <h1>Finally feel like <em>yourself</em> again.</h1>
+      <p>A 12-week clinical program for women in perimenopause and menopause — led by a specialist Nurse Practitioner who will listen, test thoroughly, and build a plan that actually works.</p>
+      <div class="hero-cta">
+        <a href="https://book.beoptimal.ca/" class="btn-primary">Book a free intro call</a>
+        <a href="#how-it-works" class="btn-secondary-hero">See how it works</a>
+      </div>
+      <p class="hero-note">Founding patient rate: $695 + HST &middot; OHIP-covered bloodwork included</p>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem-section">
+    <div class="section-inner">
+      <div class="section-label">The reality</div>
+      <div class="section-heading">This isn't <em>in your head.</em></div>
+      <p class="section-subtext">If you've felt dismissed, rushed through, or told "this is just part of aging" — you're not alone.</p>
+
+      <div class="problem-grid">
+        <div class="problem-text">
+          <h3>Your doctor isn't the problem. The system is.</h3>
+          <p>Most family physicians have <strong>10 minutes per visit</strong> and received fewer than a handful of hours of menopause-specific training in medical school. It's not that they don't care. It's that the system wasn't built for this.</p>
+          <p>So women spend months — sometimes years — cycling through appointments, supplements, and late-night Google searches. Spending $80 to $150 a month on products that aren't quite working. Wondering if this is just the way things are now.</p>
+          <p><strong>It doesn't have to be.</strong> The right assessment, with a clinician who specializes in hormone health, can change the trajectory of this entire chapter of your life.</p>
+        </div>
+        <div class="problem-image">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Medical consultation">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Symptoms Section -->
+  <section class="symptoms-section">
+    <div class="section-inner">
+      <div class="section-label">Sound familiar?</div>
+      <div class="section-heading">You don't need a diagnosis <em>to start</em></div>
+      <p class="section-subtext">Many women aren't sure if what they're experiencing is perimenopause, menopause, thyroid — or something else entirely. That's exactly what the assessment is for.</p>
+
+      <div class="symptoms-grid">
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5zM3 18c0-3 4-5 9-5s9 2 9 5v2H3v-2z"/></svg>
+          </div>
+          <div>
+            <h4>Brain fog &amp; fatigue</h4>
+            <p>Can't focus. Can't remember words. Exhausted by 2pm no matter how much you slept.</p>
+          </div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </div>
+          <div>
+            <h4>Hot flashes &amp; night sweats</h4>
+            <p>Disrupting your day and destroying your sleep. Waking up drenched at 3am.</p>
+          </div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <h4>Mood changes &amp; anxiety</h4>
+            <p>Irritability, low mood, or anxiety that came out of nowhere — and nothing explains it.</p>
+          </div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          </div>
+          <div>
+            <h4>Sleep disruption</h4>
+            <p>Falling asleep is fine. Staying asleep? That ended two years ago.</p>
+          </div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <h4>Weight &amp; body changes</h4>
+            <p>Your metabolism shifted. Nothing you're doing is working the way it used to.</p>
+          </div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <div>
+            <h4>Low libido &amp; dryness</h4>
+            <p>Changes you don't feel comfortable raising in a 10-minute appointment. We get it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Overview / How It Works -->
+  <section class="program-section" id="how-it-works">
+    <div class="section-inner">
+      <div class="program-intro">
+        <div class="section-label">How it works</div>
+        <div class="section-heading">A <em>real</em> program. Not a single appointment.</div>
+        <p class="section-subtext">The Optimal Hormone Program is structured over 12 weeks with a dedicated care team — so nothing falls through the cracks and you're never wondering what comes next.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="step-number">1</div>
+          <h4>Free intro call</h4>
+          <p>Speak with our care coordinator. She'll walk you through the program, ask a few questions to confirm it's a good fit, and book your first visit — no commitment until you're ready.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-number">2</div>
+          <h4>Onboarding &amp; testing</h4>
+          <p>Your first in-clinic visit includes a body composition scan (InBody), a program orientation, and your OHIP-covered bloodwork requisition for a comprehensive hormone and metabolic panel.</p>
+          <p class="step-detail">Estradiol, testosterone, progesterone, FSH, TSH, thyroid, cortisol, DHEA — and more. All covered by OHIP.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-number">3</div>
+          <h4>60-minute NP consultation</h4>
+          <p>A full hour with your Nurse Practitioner — not ten minutes. She reviews your bloodwork, your symptoms, your history, and builds a personalized treatment plan. If hormone therapy is right for you, she writes the prescription that same day.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-number">4</div>
+          <h4>Care coordinator check-ins</h4>
+          <p>Between visits, your care coordinator checks in at week one and week three to make sure things are on track and answer any questions as your treatment begins.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-number">5</div>
+          <h4>Two NP follow-ups</h4>
+          <p>Structured follow-ups to review your progress, adjust your treatment, and repeat your body composition scan at 12 weeks — so you can see the change, not just feel it.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-number">6</div>
+          <h4>Ongoing care</h4>
+          <p>At discharge, your prescriptions are renewed for one year. Annual follow-ups and as-needed visits are available. Your family doctor receives a full report after every clinical visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="included-section">
+    <div class="section-inner">
+      <div class="section-label">Everything included</div>
+      <div class="section-heading">Your <em>Optimal</em> program</div>
+      <p class="section-subtext">One fee. No surprise bills. No upsells.</p>
+
+      <div class="included-grid">
+        <div class="included-card">
+          <h4>60-Min NP Consultation</h4>
+          <p>A deep-dive assessment with a Nurse Practitioner who specializes in women's hormone health. Not a rushed visit — a real conversation.</p>
+        </div>
+        <div class="included-card">
+          <h4>OHIP-Covered Bloodwork</h4>
+          <p>A comprehensive hormone and metabolic panel — estradiol, testosterone, progesterone, FSH, thyroid, cortisol, DHEA — covered by your health card.</p>
+        </div>
+        <div class="included-card">
+          <h4>Body Composition Analysis &times; 2</h4>
+          <p>InBody scan at intake and 12 weeks. Real data on muscle mass, metabolic rate, and body fat — not just a number on a scale.</p>
+        </div>
+        <div class="included-card">
+          <h4>Written Treatment Plan</h4>
+          <p>A clear, personalized plan delivered to you through our secure portal — plus a report sent to your family doctor after every visit.</p>
+        </div>
+        <div class="included-card">
+          <h4>Two Follow-Up Appointments</h4>
+          <p>NP follow-ups to review your progress, adjust dosing, and manage side effects. Virtual or in-person options available.</p>
+        </div>
+        <div class="included-card">
+          <h4>Dedicated Care Coordinator</h4>
+          <p>A real person you can reach between visits. Cheryl is your point of contact for questions, scheduling, and support throughout the program.</p>
+        </div>
+        <div class="included-card">
+          <h4>Secure Patient Portal</h4>
+          <p>Message your care team, access your lab results, and receive your treatment plan documents — all in one place.</p>
+        </div>
+        <div class="included-card">
+          <h4>Family Doctor Coordination</h4>
+          <p>Full reports sent to your GP after every visit. We work alongside your existing healthcare team, not around them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="diff-section">
+    <div class="section-inner">
+      <div class="section-label">Why this is different</div>
+      <div class="section-heading">Not a med spa. Not an app. <em>A clinic.</em></div>
+      <p class="section-subtext">Our core business is clinical care. Hormone health is what we focus on — not one of thirty things on a menu.</p>
+
+      <div class="diff-grid">
+        <div class="diff-image">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80" alt="Clinical healthcare setting">
+        </div>
+        <ul class="diff-list">
+          <li>
+            <div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Same clinician, every visit</h4>
+              <p>You see the same NP from start to finish. No rotating providers.</p>
+            </div>
+          </li>
+          <li>
+            <div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Health Canada-approved treatments</h4>
+              <p>Body-identical hormones in approved formats — patches, creams, capsules. No unregulated pellets.</p>
+            </div>
+          </li>
+          <li>
+            <div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Adjustable at any visit</h4>
+              <p>Unlike pellet therapy, your dose can be adjusted at any follow-up. You're never locked in.</p>
+            </div>
+          </li>
+          <li>
+            <div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>No supplement upsell</h4>
+              <p>We don't sell a branded supplement line. If supplements are warranted, the NP recommends specific products — no sales pressure.</p>
+            </div>
+          </li>
+          <li>
+            <div class="diff-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>More affordable than the alternatives</h4>
+              <p>Pellet therapy runs $1,800–$2,200 in year one. A comparable Toronto program is $895. Our founding rate is $695.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-inner">
+      <div class="section-heading">Simple, <em>transparent</em> pricing</div>
+      <p class="section-subtext">One program fee covers everything listed above. No hidden costs. No surprise bills.</p>
+
+      <div class="pricing-card">
+        <div class="pricing-badge">Founding Patient Rate</div>
+        <div class="pricing-amount">$695 <span>+ HST</span></div>
+        <p class="pricing-note">Full 12-week program &middot; Standard rate will be $895</p>
+
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Onboarding &amp; testing appointment</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>OHIP-covered comprehensive bloodwork</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>InBody body composition scan &times; 2</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>60-minute NP consultation + treatment plan</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Two NP follow-up appointments</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Care coordinator check-ins &amp; patient portal</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reports to your family doctor after every visit</li>
+        </ul>
+
+        <a href="https://book.beoptimal.ca/" class="btn-pricing">Book a free intro call</a>
+
+        <p class="pricing-fine-print">NP receipts may be submittable to extended health plans. May qualify as a medical expense on your taxes. OHIP bloodwork is at no additional cost.</p>
+      </div>
+
+      <div class="pricing-comparison">
+        <p>For roughly what you might spend on <strong>six months of supplements that aren't quite working</strong>, you get a proper clinical program with a specialist, real testing, a treatment plan, and a team following up with you for three months to make sure it's actually working.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="section-inner">
+      <div class="section-heading">Frequently asked <em>questions</em></div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need a family doctor to enroll?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. You do not need a family physician to enroll. If you don't have a GP, our NP will explain how any abnormal lab results are handled at your onboarding appointment. At the end of the program, your prescriptions can be renewed for one year directly through our clinic.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            I'm not sure I'm in menopause. Is this program for me?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's one of the most common things we hear. You don't need a diagnosis to book. Many women come in unsure whether what they're experiencing is perimenopause, menopause, thyroid-related, or something else. That's exactly what the comprehensive assessment is for — our NP will figure out the rest.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the bloodwork really covered by OHIP?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. All baseline bloodwork ordered through this program is OHIP-covered. Your NP prepares the requisition, and you take it to a LifeLabs or Dynacare near you. There is no additional charge for these tests.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Why isn't the program itself covered by OHIP?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>OHIP covers the bloodwork we order. But it doesn't fund the kind of extended, specialized care this program provides — a 60-minute consultation, body composition testing, a dedicated care coordinator, a written treatment plan, and structured follow-up. That level of service simply isn't resourced in the public system right now, and that's exactly why this program exists.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I claim this on my insurance or taxes?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Many extended health plans cover Nurse Practitioner visits. We provide a proper receipt with the NP's registration number that you can submit. Some patients also claim it through a Health Spending Account, and it may qualify as a medical expense on your taxes. We recommend checking with your benefits provider or accountant.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can't my family doctor do this?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>They can prescribe hormone therapy — and many do. The difference is time and focus. Most family doctors have about ten minutes per visit and limited training specifically in menopause care. Our NP spends a full hour with you, focuses exclusively on hormone health, runs a comprehensive panel, and follows up multiple times over three months. We work alongside your doctor, not instead of them.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if it doesn't work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's exactly why the program has built-in follow-ups. At each visit, the NP reviews your response and adjusts your treatment — different dose, different delivery method, adding or removing something. If HRT isn't right for you, there are non-hormonal options we can explore too. The goal is to find what works for your body. That's the whole point of a program versus a single appointment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are the hormones safe?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We use Health Canada-approved, body-identical hormones — estradiol and micronized progesterone — which are chemically identical to what your body used to produce. Current evidence shows that for most women who start within ten years of menopause, the benefits significantly outweigh the risks. Your NP will review your personal risk profile in detail at your consultation and ensure any plan is safe and appropriate for you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can follow-up appointments be done virtually?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Your first follow-up can be done virtually or in-person. The final follow-up is recommended in-person because it includes your second InBody body composition scan to measure your progress over the program.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <div class="section-heading">Start your journey to <em>feeling like yourself</em> again</div>
+      <p class="section-subtext">A free intro call with our care coordinator takes fifteen minutes. No commitment. No pressure. Just a conversation about what you're going through and whether the program is right for you.</p>
+      <a href="https://book.beoptimal.ca/" class="btn-cta">
+        Book a free intro call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <div class="cta-images">
+        <img src="https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?w=600&q=80" alt="Couple walking in nature">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Woman meditating peacefully by water">
+        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&q=80" alt="Warm sunlight through trees in nature">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="12" cy="12" r="5.5" fill="white"/>
+            <circle cx="28" cy="12" r="5.5" fill="white"/>
+            <circle cx="12" cy="28" r="5.5" fill="white"/>
+            <circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <p>Optimal Health Clinic<br>A private clinic built for personalized and preventative health.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="https://www.beoptimal.ca">Home</a>
+        <a href="https://book.beoptimal.ca/">Book an intro</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>Optimal Family Health Clinic<br>630 Huronia Rd, Unit 7<br>Barrie, ON L4N 9Y2</p>
+        <p style="margin-top: 12px;">
+          Email: <a href="mailto:care@beoptimal.ca" style="display:inline;">care@beoptimal.ca</a><br>
+          Phone: <a href="tel:4373700291" style="display:inline;">(437) 370-0291</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Optimal 2026</p>
+      <a href="https://www.beoptimal.ca">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky CTA on scroll
+    const stickyCta = document.getElementById('stickyCta');
+    const heroSection = document.querySelector('.hero');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stickyCta.classList.add('visible');
+        } else {
+          stickyCta.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(heroSection);
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+        // Open clicked (if it wasn't already open)
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
