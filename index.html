@@ -242,6 +242,17 @@
     .btn-pricing:hover { background: var(--cream); transform: translateY(-1px); }
     .pricing-fine-print { margin-top: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.5; text-align: center; }
 
+    /* ── Team ── */
+    .team-section { background: var(--cream); border-top: 1px solid var(--border); }
+    .team-card { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; max-width: 860px; margin: 48px auto 0; }
+    .team-photo { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .team-info { padding-top: 6px; }
+    .team-name { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; color: var(--text-dark); line-height: 1.2; margin-bottom: 4px; }
+    .team-credentials { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green-600); margin-bottom: 20px; }
+    .team-bio { font-size: 0.97rem; color: var(--text-body); line-height: 1.8; }
+    @media (max-width: 700px) { .team-card { grid-template-columns: 1fr; gap: 32px; } .team-photo { max-width: 200px; aspect-ratio: 1/1; } }
+
     /* ── FAQ ── */
     .faq-section { background: var(--cream); }
     .faq-section .section-heading { text-align: center; margin-bottom: 50px; }
@@ -781,6 +792,23 @@
         <div class="pricing-scarcity"><p>We're accepting our first 50 patients at this introductory rate.</p></div>
         <a href="https://book.beoptimal.ca/" class="btn-pricing">Book a free intro call</a>
         <p class="pricing-fine-print">NP receipts may be submittable to extended health plans. May qualify as a medical expense on your taxes. OHIP bloodwork is at no additional cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team-section">
+    <div class="section-inner">
+      <div class="section-label">Your clinician</div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="images/np-chantelle.jpg" alt="Chantelle Oostwoud, MN, PHC-NP">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Chantelle Oostwoud</div>
+          <div class="team-credentials">MN, PHC-NP &nbsp;·&nbsp; Lead Clinician</div>
+          <p class="team-bio">Chantelle Oostwoud, MN, PHC-NP is the lead clinician for the Women's Hormone Health Program at Optimal Family Health. A Nurse Practitioner with a Master of Nursing from Athabasca University, she brings nearly a decade of frontline experience across emergency medicine, critical care, and remote community health to her work in Optimal's Enhanced Care program — where she works with a small panel of patients who want more time, more thoroughness, and more answers than the standard system typically allows.</p>
+        </div>
       </div>
     </div>
   </section>
