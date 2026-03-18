@@ -127,7 +127,7 @@
     .symptom-card:hover p { max-height: 80px; opacity: 1; margin-top: 10px; }
 
     /* ── Hormone Map Infographic ── */
-    .hormone-map-section { background: var(--cream-dark); }
+    .hormone-map-section { background: white; }
     .hormone-map-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
     .hormone-map-container {
       max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden;
@@ -150,7 +150,7 @@
     }
 
     /* ── 6-Step Protocol ── */
-    .protocol-section { background: white; border-top: 4px solid var(--green-800); }
+    .protocol-section { background: var(--cream); }
     .protocol-intro { text-align: center; max-width: 700px; margin: 0 auto 64px; }
     .protocol-intro .section-subtext { margin: 0 auto; }
     /* Vertical stepper */
@@ -218,29 +218,29 @@
     .benefit-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
     /* ── Pricing ── */
-    .pricing-section { background: var(--green-800); color: white; }
-    .pricing-section .section-heading { color: white; text-align: center; }
-    .pricing-section .section-heading em { color: #a8cfa8; }
-    .pricing-section .section-subtext { color: rgba(255,255,255,0.7); text-align: center; margin: 0 auto 50px; }
-    .pricing-card { max-width: 640px; margin: 0 auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 48px 44px; }
-    .pricing-badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: rgba(168,207,168,0.15); border: 1px solid rgba(168,207,168,0.3); color: #a8cfa8; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; }
+    .pricing-section { background: var(--green-100); }
+    .pricing-section .section-heading { color: var(--text-dark); text-align: center; }
+    .pricing-section .section-heading em { color: var(--green-700); }
+    .pricing-section .section-subtext { color: var(--text-body); text-align: center; margin: 0 auto 50px; }
+    .pricing-card { max-width: 640px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 20px; padding: 48px 44px; box-shadow: 0 8px 48px rgba(0,0,0,0.07); }
+    .pricing-badge { display: inline-block; padding: 6px 16px; border-radius: 50px; background: var(--sage-light); border: 1px solid #b8ccaa; color: var(--green-700); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; }
     .value-stack { list-style: none; margin-bottom: 32px; }
-    .value-stack li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+    .value-stack li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-body); }
     .value-stack li:last-child { border-bottom: none; }
-    .value-stack .item-value { color: rgba(255,255,255,0.45); font-size: 0.85rem; }
-    .value-stack .item-value.free { color: #a8cfa8; font-weight: 600; }
-    .value-total { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.15); margin-bottom: 8px; }
-    .value-total span:first-child { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-    .value-total span:last-child { font-size: 1rem; color: rgba(255,255,255,0.5); text-decoration: line-through; }
+    .value-stack .item-value { color: var(--text-muted); font-size: 0.85rem; }
+    .value-stack .item-value.free { color: var(--green-600); font-weight: 600; }
+    .value-total { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 1px solid var(--border); margin-bottom: 8px; }
+    .value-total span:first-child { font-size: 0.9rem; color: var(--text-body); }
+    .value-total span:last-child { font-size: 1rem; color: var(--text-muted); text-decoration: line-through; }
     .pricing-amount-row { text-align: center; margin: 24px 0 8px; }
-    .pricing-amount { font-family: var(--serif); font-size: 3.5rem; font-weight: 700; color: white; line-height: 1; }
-    .pricing-amount span { font-size: 1.2rem; font-weight: 400; color: rgba(255,255,255,0.6); }
-    .pricing-note { font-size: 0.88rem; color: rgba(255,255,255,0.45); text-align: center; margin-bottom: 32px; }
-    .pricing-scarcity { text-align: center; margin-bottom: 24px; padding: 12px 20px; background: rgba(168,207,168,0.1); border-radius: 10px; border: 1px solid rgba(168,207,168,0.2); }
-    .pricing-scarcity p { font-size: 0.88rem; color: #a8cfa8; }
-    .btn-pricing { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 18px 32px; background: white; color: var(--green-800); border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); }
-    .btn-pricing:hover { background: var(--cream); transform: translateY(-1px); }
-    .pricing-fine-print { margin-top: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.5; text-align: center; }
+    .pricing-amount { font-family: var(--serif); font-size: 3.5rem; font-weight: 700; color: var(--green-800); line-height: 1; }
+    .pricing-amount span { font-size: 1.2rem; font-weight: 400; color: var(--text-muted); }
+    .pricing-note { font-size: 0.88rem; color: var(--text-muted); text-align: center; margin-bottom: 32px; }
+    .pricing-scarcity { text-align: center; margin-bottom: 24px; padding: 12px 20px; background: var(--sage-light); border-radius: 10px; border: 1px solid #b8ccaa; }
+    .pricing-scarcity p { font-size: 0.88rem; color: var(--green-700); }
+    .btn-pricing { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 18px 32px; background: var(--green-700); color: white; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); }
+    .btn-pricing:hover { background: var(--green-800); transform: translateY(-1px); }
+    .pricing-fine-print { margin-top: 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; text-align: center; }
 
     /* ── Team ── */
     .team-section { background: var(--cream); border-top: 1px solid var(--border); }
