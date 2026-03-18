@@ -14,6 +14,7 @@
       --green-900: #1a2e1a; --green-800: #243524; --green-700: #2d4a2d;
       --green-600: #3d6b3d; --green-500: #4a7c4a; --green-400: #6b9e6b;
       --green-100: #e8f0e8; --cream: #f7f3ed; --cream-dark: #efe9e0;
+      --sage: #c5d5b5; --sage-light: #dde8d3;
       --white: #ffffff; --text-dark: #1a2e1a; --text-body: #3a4a3a;
       --text-muted: #6b7b6b; --border: #d4cdc2;
       --serif: 'Cormorant Garamond', Georgia, serif;
@@ -26,20 +27,27 @@
     .top-bar { background: linear-gradient(135deg, #5a5a5a, #787878); color: white; text-align: center; padding: 10px 20px; font-size: 0.85rem; }
     .top-bar a { color: white; font-weight: 600; }
 
-    /* ── Nav (matches beOptimal.ca) ── */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(36,53,36,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: white; }
-    .nav-logo { width: 40px; height: 40px; }
+    /* ── Floating Nav (beOptimal oval style) ── */
+    .nav-wrapper { position: sticky; top: 0; z-index: 100; padding: 12px 24px 0; }
+    nav {
+      max-width: 1260px; margin: 0 auto;
+      background: rgba(36,53,36,0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-radius: 60px; padding: 12px 14px 12px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+    .nav-logo { width: 36px; height: 36px; }
     .nav-logo svg { width: 100%; height: 100%; }
-    .nav-brand span { font-family: var(--sans); font-weight: 400; font-size: 0.95rem; color: rgba(255,255,255,0.9); }
-    .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .btn-nav { padding: 10px 22px; border-radius: 50px; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); cursor: pointer; border: none; }
-    .btn-nav-outline { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.3); }
-    .btn-nav-outline:hover { background: rgba(255,255,255,0.22); }
-    .btn-nav-primary { background: white; color: var(--green-800); }
+    .nav-brand span { font-family: var(--sans); font-weight: 400; font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-nav { padding: 10px 20px; border-radius: 50px; font-size: 0.84rem; font-weight: 500; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); cursor: pointer; border: none; white-space: nowrap; }
+    .btn-nav-outline { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.25); }
+    .btn-nav-outline:hover { background: rgba(255,255,255,0.2); }
+    .btn-nav-filled { background: var(--green-700); color: white; border: 1px solid rgba(255,255,255,0.15); }
+    .btn-nav-filled:hover { background: var(--green-600); }
+    .btn-nav-primary { background: white; color: var(--green-800); font-weight: 600; }
     .btn-nav-primary:hover { background: var(--cream); }
-    .btn-nav-ghost { background: none; color: rgba(255,255,255,0.7); border: none; padding: 10px 16px; }
-    .btn-nav-ghost:hover { color: white; }
 
     /* ── Sticky CTA ── */
     .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 99; background: var(--green-800); padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 16px; transform: translateY(100%); transition: transform 0.4s ease; }
@@ -48,13 +56,13 @@
     .sticky-cta .btn-sticky { background: white; color: var(--green-800); padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.875rem; white-space: nowrap; }
 
     /* ── Hero ── */
-    .hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; }
+    .hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; margin-top: -72px; padding-top: 72px; }
     .hero-bg { position: absolute; inset: 0; z-index: 0; }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(26,46,26,0.78) 0%, rgba(26,46,26,0.58) 45%, rgba(26,46,26,0.15) 100%); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(26,46,26,0.78) 0%, rgba(26,46,26,0.55) 45%, rgba(26,46,26,0.12) 100%); }
     .hero-content { position: relative; z-index: 1; max-width: 680px; padding: 80px 60px; }
     .hero-badge { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 28px; }
-    .hero-badge .tag { display: inline-block; padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.03em; }
+    .hero-badge .tag { display: inline-block; padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 500; }
     .tag-new { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: white; }
     .tag-location { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); }
     .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; color: white; margin-bottom: 20px; }
@@ -94,34 +102,36 @@
     .problem-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
     .problem-image img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* ── Symptoms ── */
-    .symptoms-section { background: var(--green-800); color: white; }
-    .symptoms-section .section-label { color: var(--green-400); }
-    .symptoms-section .section-heading { color: white; }
-    .symptoms-section .section-heading em { color: #a8cfa8; }
-    .symptoms-section .section-subtext { color: rgba(255,255,255,0.7); }
-    .symptoms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; margin-top: 50px; }
-    .symptom-card { background: var(--green-800); padding: 32px 26px; display: flex; align-items: flex-start; gap: 16px; cursor: default; }
-    .symptom-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .symptom-icon svg { width: 22px; height: 22px; stroke: #a8cfa8; fill: none; stroke-width: 1.5; }
-    .symptom-card h4 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: white; margin-bottom: 4px; }
-    .symptom-card p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.5; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, opacity 0.35s ease; opacity: 0; }
-    .symptom-card:hover p { max-height: 80px; opacity: 1; }
-    .symptoms-section .btn-section { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); }
-    .symptoms-section .btn-section:hover { background: rgba(255,255,255,0.2); }
+    /* ── Symptoms (Lume-inspired, cream bg with sage cards) ── */
+    .symptoms-section { background: var(--cream-dark); }
+    .symptoms-section .section-label { text-align: center; }
+    .symptoms-section .section-heading { text-align: center; }
+    .symptoms-section .section-subtext { text-align: center; margin: 0 auto 50px; }
+    .symptoms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
+    .symptom-card {
+      background: var(--sage-light); padding: 22px 24px; border-radius: 14px;
+      cursor: default; transition: background 0.2s ease;
+    }
+    .symptom-card:hover { background: var(--sage); }
+    .symptom-card h4 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); display: flex; align-items: center; justify-content: space-between; }
+    .symptom-card h4 .expand-icon { font-size: 1.2rem; color: var(--text-muted); transition: transform 0.3s ease; }
+    .symptom-card:hover h4 .expand-icon { transform: rotate(45deg); }
+    .symptom-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.5; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin 0.35s ease, opacity 0.35s ease; opacity: 0; margin-top: 0; }
+    .symptom-card:hover p { max-height: 80px; opacity: 1; margin-top: 10px; }
 
     /* ── 6-Step Protocol ── */
     .protocol-section { background: var(--cream); }
     .protocol-intro { text-align: center; max-width: 700px; margin: 0 auto 60px; }
     .protocol-intro .section-subtext { margin: 0 auto; }
     .protocol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
-    .protocol-card { background: var(--green-800); border-radius: 14px; padding: 0; overflow: hidden; }
-    .protocol-card-header { background: var(--green-600); padding: 10px 20px; text-align: center; }
-    .protocol-card-header span { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: white; letter-spacing: 0.05em; text-transform: uppercase; }
+    .protocol-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color 0.25s ease; }
+    .protocol-card:hover { border-color: var(--green-400); }
+    .protocol-card-header { background: var(--green-600); padding: 8px 20px; text-align: center; }
+    .protocol-card-header span { font-family: var(--sans); font-size: 0.75rem; font-weight: 600; color: white; letter-spacing: 0.06em; text-transform: uppercase; }
     .protocol-card-body { padding: 28px 24px; }
-    .protocol-card-body .step-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 8px; }
-    .protocol-card-body h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: 10px; }
-    .protocol-card-body p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.55; }
+    .protocol-card-body .step-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--green-100); line-height: 1; margin-bottom: 6px; }
+    .protocol-card-body h4 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+    .protocol-card-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
 
     /* ── What's Included ── */
     .included-section { background: white; }
@@ -130,16 +140,18 @@
     .included-card:hover { border-color: var(--green-400); }
     .included-card h4 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
     .included-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
-    .included-card.addon { border-style: dashed; background: var(--cream); }
-    .included-card.addon .addon-label { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-600); background: var(--green-100); padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
-    .included-extras { margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .included-extras { margin-top: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
     .included-extra { display: flex; align-items: center; gap: 10px; padding: 16px 20px; background: var(--cream); border-radius: 10px; font-size: 0.88rem; color: var(--text-body); }
     .included-extra svg { width: 18px; height: 18px; stroke: var(--green-600); fill: none; stroke-width: 2; flex-shrink: 0; }
+    .included-addon { margin-top: 24px; padding: 28px 32px; border: 1px dashed var(--border); border-radius: 14px; background: var(--cream); }
+    .included-addon .addon-label { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-600); background: var(--green-100); padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
+    .included-addon h4 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+    .included-addon p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
     /* ── Comparison Table ── */
     .comparison-section { background: var(--cream); }
     .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 50px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
-    .comparison-table thead th { padding: 20px 28px; text-align: left; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; background: var(--cream-dark); border-bottom: 1px solid var(--border); }
+    .comparison-table thead th { padding: 20px 28px; text-align: left; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; background: var(--cream-dark); border-bottom: 1px solid var(--border); }
     .comparison-table thead th:first-child { background: transparent; }
     .comparison-table thead th.highlight { background: var(--green-700); color: white; }
     .comparison-table td { padding: 18px 28px; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-body); vertical-align: top; background: white; }
@@ -151,23 +163,17 @@
     .td-detail { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; font-weight: 400; }
     .comparison-note { max-width: 600px; margin: 24px auto 0; text-align: center; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
 
-    /* ── Care Experience (replaces "Why Different") ── */
-    .experience-section { background: white; overflow: hidden; }
-    .experience-hero { position: relative; height: 400px; border-radius: 20px; overflow: hidden; margin-bottom: 60px; }
-    .experience-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-    .experience-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,46,26,0.5) 0%, transparent 60%); }
-    .experience-hero-text { position: absolute; bottom: 40px; left: 40px; z-index: 1; }
-    .experience-hero-text .section-label { color: rgba(255,255,255,0.7); }
-    .experience-hero-text .section-heading { color: white; margin-bottom: 0; }
-    .experience-hero-text .section-heading em { color: #a8cfa8; }
-    .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .experience-copy p { font-size: 1.05rem; color: var(--text-body); line-height: 1.8; margin-bottom: 20px; }
-    .experience-copy p:last-child { margin-bottom: 0; }
-    .experience-pillars { list-style: none; }
-    .experience-pillars li { padding: 24px 0; border-bottom: 1px solid var(--border); }
-    .experience-pillars li:last-child { border-bottom: none; }
-    .experience-pillars h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
-    .experience-pillars p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+    /* ── Benefits / Symptom Relief ── */
+    .benefits-section { background: white; }
+    .benefits-section .section-heading { text-align: center; }
+    .benefits-section .section-subtext { text-align: center; margin: 0 auto 50px; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
+    .benefit-card { text-align: center; padding: 40px 28px; border-radius: 16px; background: var(--cream); transition: transform 0.2s ease; }
+    .benefit-card:hover { transform: translateY(-4px); }
+    .benefit-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--green-100); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .benefit-icon svg { width: 26px; height: 26px; stroke: var(--green-700); fill: none; stroke-width: 1.5; }
+    .benefit-card h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+    .benefit-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
     /* ── Pricing ── */
     .pricing-section { background: var(--green-800); color: white; }
@@ -226,24 +232,23 @@
     .footer-col a:hover { color: white; }
     .footer-col p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
     .footer-bottom { max-width: 1100px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
-    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
-    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.8rem; }
+    .footer-bottom p, .footer-bottom a { font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      nav { padding: 14px 20px; }
+      .nav-wrapper { padding: 8px 12px 0; }
+      nav { padding: 10px 12px 10px 18px; border-radius: 40px; }
       .nav-brand span { display: none; }
       section { padding: 70px 24px; }
       .hero-content { padding: 60px 24px; }
-      .problem-grid, .cta-split, .experience-grid { grid-template-columns: 1fr; gap: 40px; }
-      .symptoms-grid, .protocol-grid { grid-template-columns: 1fr; }
+      .problem-grid, .cta-split { grid-template-columns: 1fr; gap: 40px; }
+      .symptoms-grid, .protocol-grid, .benefits-grid { grid-template-columns: 1fr; }
       .included-featured { grid-template-columns: 1fr; }
       .included-extras { grid-template-columns: 1fr 1fr; }
       .comparison-table { font-size: 0.82rem; }
       .comparison-table td, .comparison-table th { padding: 12px 16px; }
       .footer-inner { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 8px; }
-      .experience-hero { height: 280px; }
     }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.4rem; }
@@ -252,7 +257,7 @@
       .pricing-amount { font-size: 2.8rem; }
       .included-extras { grid-template-columns: 1fr; }
       .comparison-table { display: block; overflow-x: auto; }
-      .protocol-grid { grid-template-columns: 1fr; }
+      .symptoms-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -263,25 +268,27 @@
     Call or text us at <a href="tel:4373700291">(437) 370-0291</a> or email us at <a href="mailto:care@beoptimal.ca">care@beoptimal.ca</a> to learn more
   </div>
 
-  <!-- Navigation (matches beOptimal.ca structure) -->
-  <nav>
-    <a href="https://www.beoptimal.ca" class="nav-brand">
-      <div class="nav-logo">
-        <svg viewBox="0 0 40 40" fill="none">
-          <circle cx="12" cy="12" r="5.5" fill="white"/>
-          <circle cx="28" cy="12" r="5.5" fill="white"/>
-          <circle cx="12" cy="28" r="5.5" fill="white"/>
-          <circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/>
-        </svg>
+  <!-- Floating Nav (beOptimal oval style) -->
+  <div class="nav-wrapper">
+    <nav>
+      <a href="https://www.beoptimal.ca" class="nav-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="12" cy="12" r="5.5" fill="white"/>
+            <circle cx="28" cy="12" r="5.5" fill="white"/>
+            <circle cx="12" cy="28" r="5.5" fill="white"/>
+            <circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <span>Women's Hormone Optimization</span>
+      </a>
+      <div class="nav-actions">
+        <a href="https://www.beoptimal.ca" class="btn-nav btn-nav-outline">Enhanced Care</a>
+        <a href="tel:4373700291" class="btn-nav btn-nav-outline">Request a callback</a>
+        <a href="https://book.beoptimal.ca/" class="btn-nav btn-nav-primary">Book a free intro</a>
       </div>
-      <span>Women's Hormone Optimization</span>
-    </a>
-    <div class="nav-actions">
-      <a href="https://www.beoptimal.ca" class="btn-nav btn-nav-ghost">← Membership</a>
-      <a href="tel:4373700291" class="btn-nav btn-nav-outline">Request a callback</a>
-      <a href="https://book.beoptimal.ca/" class="btn-nav btn-nav-primary">Book a free intro</a>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
   <!-- Sticky Bottom CTA -->
   <div class="sticky-cta" id="stickyCta">
@@ -292,7 +299,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.pexels.com/photos/3822583/pexels-photo-3822583.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Mature woman practicing yoga outdoors">
+      <img src="https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Mature woman practicing yoga in serene setting">
     </div>
     <div class="hero-content">
       <div class="hero-badge">
@@ -318,7 +325,6 @@
       <div class="section-label">The reality</div>
       <div class="section-heading">This isn't <em>in your head.</em></div>
       <p class="section-subtext">If you've felt dismissed, rushed through, or told "this is just part of aging" — you're not alone.</p>
-
       <div class="problem-grid">
         <div class="problem-text">
           <h3>Your doctor isn't the problem. The system is.</h3>
@@ -330,14 +336,13 @@
           <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Healthcare consultation">
         </div>
       </div>
-
       <div class="callout-bar">
         <p><strong>No family doctor? No problem.</strong> You do not need a GP to enroll. Our Nurse Practitioner can manage your care independently and renew your prescriptions for a full year after the protocol.</p>
       </div>
     </div>
   </section>
 
-  <!-- Symptoms -->
+  <!-- Symptoms (Lume-inspired sage cards on cream) -->
   <section class="symptoms-section">
     <div class="section-inner">
       <div class="section-label">Sound familiar?</div>
@@ -346,28 +351,28 @@
 
       <div class="symptoms-grid">
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5zM3 18c0-3 4-5 9-5s9 2 9 5v2H3v-2z"/></svg></div>
-          <div><h4>Brain fog &amp; fatigue</h4><p>Can't focus. Can't remember words. Exhausted by 2pm no matter how much you slept.</p></div>
+          <h4>Brain fog &amp; fatigue <span class="expand-icon">+</span></h4>
+          <p>Can't focus. Can't remember words. Exhausted by 2pm no matter how much you slept.</p>
         </div>
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
-          <div><h4>Hot flashes &amp; night sweats</h4><p>Disrupting your day and destroying your sleep. Waking up drenched at 3am.</p></div>
+          <h4>Hot flashes &amp; night sweats <span class="expand-icon">+</span></h4>
+          <p>Disrupting your day and destroying your sleep. Waking up drenched at 3am.</p>
         </div>
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <div><h4>Mood changes &amp; anxiety</h4><p>Irritability, low mood, or anxiety that came out of nowhere — and nothing explains it.</p></div>
+          <h4>Mood changes &amp; anxiety <span class="expand-icon">+</span></h4>
+          <p>Irritability, low mood, or anxiety that came out of nowhere — and nothing explains it.</p>
         </div>
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></div>
-          <div><h4>Sleep disruption</h4><p>Falling asleep is fine. Staying asleep? That ended two years ago.</p></div>
+          <h4>Sleep disruption <span class="expand-icon">+</span></h4>
+          <p>Falling asleep is fine. Staying asleep? That ended two years ago.</p>
         </div>
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <div><h4>Weight &amp; body changes</h4><p>Your metabolism shifted. Nothing you're doing is working the way it used to.</p></div>
+          <h4>Weight &amp; body changes <span class="expand-icon">+</span></h4>
+          <p>Your metabolism shifted. Nothing you're doing is working the way it used to.</p>
         </div>
         <div class="symptom-card">
-          <div class="symptom-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
-          <div><h4>Low libido &amp; dryness</h4><p>Changes you don't feel comfortable raising in a 10-minute appointment. We get it.</p></div>
+          <h4>Low libido &amp; dryness <span class="expand-icon">+</span></h4>
+          <p>Changes you don't feel comfortable raising in a 10-minute appointment. We get it.</p>
         </div>
       </div>
       <div class="section-cta">
@@ -382,9 +387,8 @@
       <div class="protocol-intro">
         <div class="section-label">How it works</div>
         <div class="section-heading">A 6-step <em>protocol.</em> Not a single appointment.</div>
-        <p class="section-subtext">The Women's Hormone Optimization Protocol is a structured clinical program with a dedicated care team — so nothing falls through the cracks and you're never wondering what comes next.</p>
+        <p class="section-subtext">The Women's Hormone Optimization Protocol is a structured clinical program with a dedicated care team — so nothing falls through the cracks.</p>
       </div>
-
       <div class="protocol-grid">
         <div class="protocol-card">
           <div class="protocol-card-header"><span>Step 1</span></div>
@@ -465,11 +469,6 @@
           <h4>Two Follow-Up Appointments</h4>
           <p>NP follow-ups to review your progress, adjust dosing, and manage side effects. Virtual or in-person options available.</p>
         </div>
-        <div class="included-card addon">
-          <div class="addon-label">Optional Add-On</div>
-          <h4>Advanced Hormone Testing</h4>
-          <p>For patients who need a deeper picture, your NP may recommend DUTCH testing or Mira home monitoring. Not required — available at an additional fee when clinically warranted.</p>
-        </div>
       </div>
 
       <div class="included-extras">
@@ -477,6 +476,12 @@
         <div class="included-extra"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated care coordinator</div>
         <div class="included-extra"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Secure patient portal</div>
         <div class="included-extra"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Family doctor coordination</div>
+      </div>
+
+      <div class="included-addon">
+        <div class="addon-label">Optional Add-On</div>
+        <h4>Advanced Hormone Testing</h4>
+        <p>For patients who need a deeper picture, your NP may recommend DUTCH testing or Mira home monitoring. Not required — available at an additional fee when clinically warranted.</p>
       </div>
     </div>
   </section>
@@ -487,110 +492,69 @@
       <div class="section-label">How we compare</div>
       <div class="section-heading">Not all hormone care is <em>the same</em></div>
       <p class="section-subtext">We built this protocol to fill the gaps left by the alternatives available in Barrie and across Ontario.</p>
-
       <table class="comparison-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th class="highlight">Optimal Hormone Protocol</th>
-            <th>Family Doctor / Walk-in</th>
-            <th>Med Spa / Pellet Clinic</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th></th>
+          <th class="highlight">Optimal Hormone Protocol</th>
+          <th>Family Doctor / Walk-in</th>
+          <th>Med Spa / Pellet Clinic</th>
+        </tr></thead>
         <tbody>
-          <tr>
-            <td>Consultation length</td>
-            <td class="highlight"><span class="check">&#10003;</span> 60 minutes<span class="td-detail">Thorough, unhurried assessment</span></td>
-            <td><span class="cross">&#10007;</span> 10 minutes<span class="td-detail">Rushed visits</span></td>
-            <td><span class="check">&#10003;</span> 30–45 min<span class="td-detail">Varies by clinic</span></td>
-          </tr>
-          <tr>
-            <td>In-person care</td>
-            <td class="highlight"><span class="check">&#10003;</span> Yes<span class="td-detail">In-clinic in Barrie</span></td>
-            <td><span class="check">&#10003;</span> Yes</td>
-            <td><span class="check">&#10003;</span> Yes</td>
-          </tr>
-          <tr>
-            <td>Same clinician every visit</td>
-            <td class="highlight"><span class="check">&#10003;</span> Yes<span class="td-detail">Your NP from start to finish</span></td>
-            <td><span class="cross">&#10007;</span> Often no<span class="td-detail">Rotating providers</span></td>
-            <td><span class="check">&#10003;</span> Usually</td>
-          </tr>
-          <tr>
-            <td>Comprehensive bloodwork</td>
-            <td class="highlight"><span class="check">&#10003;</span> Full panel<span class="td-detail">OHIP-covered</span></td>
-            <td><span class="check">&#10003;</span> Basic<span class="td-detail">OHIP-covered</span></td>
-            <td><span class="cross">&#10007;</span> Limited<span class="td-detail">Often out-of-pocket</span></td>
-          </tr>
-          <tr>
-            <td>Body composition testing</td>
-            <td class="highlight"><span class="check">&#10003;</span> InBody &times; 2<span class="td-detail">Baseline + follow-up</span></td>
-            <td><span class="cross">&#10007;</span> No</td>
-            <td><span class="cross">&#10007;</span> Rarely</td>
-          </tr>
-          <tr>
-            <td>Structured follow-up</td>
-            <td class="highlight"><span class="check">&#10003;</span> 2 NP visits + check-ins<span class="td-detail">Structured 6-step protocol</span></td>
-            <td><span class="cross">&#10007;</span> If you rebook<span class="td-detail">No structure</span></td>
-            <td><span class="check">&#10003;</span> Insertion visits<span class="td-detail">Every 3–6 months</span></td>
-          </tr>
-          <tr>
-            <td>Treatment approach</td>
-            <td class="highlight"><span class="check">&#10003;</span> Evidence-based<span class="td-detail">Health Canada-approved HRT</span></td>
-            <td><span class="check">&#10003;</span> Standard HRT</td>
-            <td><span class="cross">&#10007;</span> Pellets<span class="td-detail">Not Health Canada-approved</span></td>
-          </tr>
-          <tr>
-            <td>Year-one cost</td>
-            <td class="highlight"><span class="check">&#10003;</span> $695<span class="td-detail">Introductory rate, all-in</span></td>
-            <td><span class="check">&#10003;</span> $0 (OHIP)<span class="td-detail">If you can get an appointment</span></td>
-            <td><span class="cross">&#10007;</span> $1,800–$2,200+<span class="td-detail">Pellet insertions + consults</span></td>
-          </tr>
+          <tr><td>Consultation length</td><td class="highlight"><span class="check">&#10003;</span> 60 minutes<span class="td-detail">Thorough, unhurried assessment</span></td><td><span class="cross">&#10007;</span> 10 minutes<span class="td-detail">Rushed visits</span></td><td><span class="check">&#10003;</span> 30–45 min<span class="td-detail">Varies by clinic</span></td></tr>
+          <tr><td>In-person care</td><td class="highlight"><span class="check">&#10003;</span> Yes<span class="td-detail">In-clinic in Barrie</span></td><td><span class="check">&#10003;</span> Yes</td><td><span class="check">&#10003;</span> Yes</td></tr>
+          <tr><td>Same clinician every visit</td><td class="highlight"><span class="check">&#10003;</span> Yes<span class="td-detail">Your NP from start to finish</span></td><td><span class="cross">&#10007;</span> Often no<span class="td-detail">Rotating providers</span></td><td><span class="check">&#10003;</span> Usually</td></tr>
+          <tr><td>Comprehensive bloodwork</td><td class="highlight"><span class="check">&#10003;</span> Full panel<span class="td-detail">OHIP-covered</span></td><td><span class="check">&#10003;</span> Basic<span class="td-detail">OHIP-covered</span></td><td><span class="cross">&#10007;</span> Limited<span class="td-detail">Often out-of-pocket</span></td></tr>
+          <tr><td>Body composition testing</td><td class="highlight"><span class="check">&#10003;</span> InBody &times; 2<span class="td-detail">Baseline + follow-up</span></td><td><span class="cross">&#10007;</span> No</td><td><span class="cross">&#10007;</span> Rarely</td></tr>
+          <tr><td>Structured follow-up</td><td class="highlight"><span class="check">&#10003;</span> 2 NP visits + check-ins<span class="td-detail">Structured 6-step protocol</span></td><td><span class="cross">&#10007;</span> If you rebook<span class="td-detail">No structure</span></td><td><span class="check">&#10003;</span> Insertion visits<span class="td-detail">Every 3–6 months</span></td></tr>
+          <tr><td>Treatment approach</td><td class="highlight"><span class="check">&#10003;</span> Evidence-based<span class="td-detail">Health Canada-approved HRT</span></td><td><span class="check">&#10003;</span> Standard HRT</td><td><span class="cross">&#10007;</span> Pellets<span class="td-detail">Not Health Canada-approved</span></td></tr>
+          <tr><td>Year-one cost</td><td class="highlight"><span class="check">&#10003;</span> $695<span class="td-detail">Introductory rate, all-in</span></td><td><span class="check">&#10003;</span> $0 (OHIP)<span class="td-detail">If you can get an appointment</span></td><td><span class="cross">&#10007;</span> $1,800–$2,200+<span class="td-detail">Pellet insertions + consults</span></td></tr>
         </tbody>
       </table>
-      <p class="comparison-note">Our introductory rate of $695 + HST will increase to $895 + HST once on-site phlebotomy services become available.</p>
-      <div class="section-cta">
-        <a href="https://book.beoptimal.ca/" class="btn-section">Book a free intro call</a>
-      </div>
+      <p class="comparison-note">Our introductory rate of $695 + HST will increase to $895 + HST.</p>
+      <div class="section-cta"><a href="https://book.beoptimal.ca/" class="btn-section">Book a free intro call</a></div>
     </div>
   </section>
 
-  <!-- Care Experience (Lume-inspired) -->
-  <section class="experience-section">
+  <!-- Benefits / Symptom Relief -->
+  <section class="benefits-section">
     <div class="section-inner">
-      <div class="experience-hero">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80" alt="Calm shoreline with warm natural light">
-        <div class="experience-hero-text">
-          <div class="section-label">The Optimal experience</div>
-          <div class="section-heading">Care designed <em>around you</em></div>
-        </div>
-      </div>
+      <div class="section-label">What to expect</div>
+      <div class="section-heading">Real relief. <em>Real results.</em></div>
+      <p class="section-subtext">Women in hormone optimization protocols report meaningful improvement within the first 8–12 weeks. Here's what changes.</p>
 
-      <div class="experience-grid">
-        <div class="experience-copy">
-          <p>Perimenopause and menopause are natural transitions — but the way most women experience them in our healthcare system is anything but natural. Rushed appointments. Generic advice. Feeling like your concerns aren't taken seriously.</p>
-          <p>We built this protocol because we believe the clinical experience matters as much as the clinical outcome. When you feel heard, when your provider knows your history, when there's real follow-up — everything works better.</p>
-          <p>This isn't telemedicine through a screen or a prescription written after ten minutes. It's an in-person relationship with a clinician who is invested in how you feel — not just at your first visit, but at every step of the protocol.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></div>
+          <h4>Sleep through the night</h4>
+          <p>Night sweats and insomnia are among the first symptoms to improve with proper hormone support.</p>
         </div>
-        <ul class="experience-pillars">
-          <li>
-            <h4>Your clinician knows you</h4>
-            <p>Same dedicated Nurse Practitioner from your first consultation through your final follow-up. No rotating providers. No starting over.</p>
-          </li>
-          <li>
-            <h4>In-person, in Barrie</h4>
-            <p>A real clinic with a real care team. Your onboarding, consultations, and body composition testing all happen here — not through a screen.</p>
-          </li>
-          <li>
-            <h4>Evidence-based, adjustable care</h4>
-            <p>Health Canada-approved, body-identical hormones in formats that can be adjusted at any follow-up. Patches, creams, capsules — whatever is right for you.</p>
-          </li>
-          <li>
-            <h4>A team that follows up</h4>
-            <p>Your care coordinator checks in between appointments. Your NP reviews your progress at every visit. Nothing gets lost between steps.</p>
-          </li>
-        </ul>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M3 18c0-3 4-5 9-5s9 2 9 5v2H3v-2z"/></svg></div>
+          <h4>Think clearly again</h4>
+          <p>Brain fog, word-finding issues, and mental fatigue often resolve once hormone levels are addressed.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>Stable energy all day</h4>
+          <p>No more crashing by mid-afternoon. Balanced hormones support sustained energy and motivation.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h4>Mood you recognize</h4>
+          <p>Anxiety, irritability, and low mood often improve significantly when the hormonal picture is corrected.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
+          <h4>Feel like yourself</h4>
+          <p>Libido, comfort, and confidence — the things that feel like they slipped away — can come back.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+          <h4>Measurable progress</h4>
+          <p>Body composition scans at intake and follow-up give you data — not just a feeling — that things are changing.</p>
+        </div>
       </div>
+      <div class="section-cta"><a href="https://book.beoptimal.ca/" class="btn-section">Book a free intro call</a></div>
     </div>
   </section>
 
@@ -599,10 +563,8 @@
     <div class="section-inner">
       <div class="section-heading">Simple, <em>transparent</em> pricing</div>
       <p class="section-subtext">One protocol fee covers everything listed above. No hidden costs. No surprise bills.</p>
-
       <div class="pricing-card">
         <div style="text-align:center"><span class="pricing-badge">Founding Patient Rate</span></div>
-
         <ul class="value-stack">
           <li>60-minute NP consultation + treatment plan <span class="item-value">$250 value</span></li>
           <li>Comprehensive hormone bloodwork panel <span class="item-value free">$0 — OHIP</span></li>
@@ -612,23 +574,11 @@
           <li>Care coordinator check-ins &amp; patient portal <span class="item-value">$150 value</span></li>
           <li>Reports to your family doctor after every visit <span class="item-value">Included</span></li>
         </ul>
-
-        <div class="value-total">
-          <span>Total protocol value</span>
-          <span>$1,190+</span>
-        </div>
-
-        <div class="pricing-amount-row">
-          <div class="pricing-amount">$695 <span>+ HST</span></div>
-        </div>
+        <div class="value-total"><span>Total protocol value</span><span>$1,190+</span></div>
+        <div class="pricing-amount-row"><div class="pricing-amount">$695 <span>+ HST</span></div></div>
         <p class="pricing-note">Full protocol &middot; Standard rate will be $895 + HST</p>
-
-        <div class="pricing-scarcity">
-          <p>We're accepting our first 50 patients at this introductory rate.</p>
-        </div>
-
+        <div class="pricing-scarcity"><p>We're accepting our first 50 patients at this introductory rate.</p></div>
         <a href="https://book.beoptimal.ca/" class="btn-pricing">Book a free intro call</a>
-
         <p class="pricing-fine-print">NP receipts may be submittable to extended health plans. May qualify as a medical expense on your taxes. OHIP bloodwork is at no additional cost.</p>
       </div>
     </div>
@@ -638,44 +588,16 @@
   <section class="faq-section">
     <div class="section-inner">
       <div class="section-heading">Frequently asked <em>questions</em></div>
-
       <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">Do I need a family doctor to enroll?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>No. You do not need a family physician to enroll. If you don't have a GP, our NP will explain how any abnormal lab results are handled at your onboarding appointment. At the end of the program, your prescriptions can be renewed for one year directly through our clinic.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">I'm not sure I'm in menopause. Is this program for me?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>That's one of the most common things we hear. You don't need a diagnosis to book. Many women come in unsure whether what they're experiencing is perimenopause, menopause, thyroid-related, or something else. That's exactly what the comprehensive assessment is for — our NP will figure out the rest.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is the bloodwork really covered by OHIP?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Yes. All baseline bloodwork ordered through this program is OHIP-covered. Your NP prepares the requisition, and you take it to a LifeLabs or Dynacare near you. There is no additional charge for these tests.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Why isn't the program itself covered by OHIP?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>OHIP covers the bloodwork we order. But it doesn't fund the kind of extended, specialized care this program provides — a 60-minute consultation, body composition testing, a dedicated care coordinator, a written treatment plan, and structured follow-up. That level of service simply isn't resourced in the public system right now, and that's exactly why this program exists.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can I claim this on my insurance or taxes?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Many extended health plans cover Nurse Practitioner visits. We provide a proper receipt with the NP's registration number that you can submit. Some patients also claim it through a Health Spending Account, and it may qualify as a medical expense on your taxes. We recommend checking with your benefits provider or accountant.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can't my family doctor do this?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>They can prescribe hormone therapy — and many do. The difference is time and focus. Most family doctors have about ten minutes per visit and limited training specifically in menopause care. Our NP spends a full hour with you, focuses exclusively on hormone health, runs a comprehensive panel, and follows up multiple times over three months. We work alongside your doctor, not instead of them.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">What if it doesn't work?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>That's exactly why the program has built-in follow-ups. At each visit, the NP reviews your response and adjusts your treatment — different dose, different delivery method, adding or removing something. If HRT isn't right for you, there are non-hormonal options we can explore too. The goal is to find what works for your body. That's the whole point of a program versus a single appointment.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Are the hormones safe?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>We use Health Canada-approved, body-identical hormones — estradiol and micronized progesterone — which are chemically identical to what your body used to produce. Current evidence shows that for most women who start within ten years of menopause, the benefits significantly outweigh the risks. Your NP will review your personal risk profile in detail at your consultation and ensure any plan is safe and appropriate for you.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can follow-up appointments be done virtually?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><p>Yes. Your first follow-up can be done virtually or in-person. The final follow-up is recommended in-person because it includes your second InBody body composition scan to measure your progress over the program.</p></div>
-        </div>
+        <div class="faq-item"><button class="faq-question">Do I need a family doctor to enroll?<span class="faq-icon">+</span></button><div class="faq-answer"><p>No. You do not need a family physician to enroll. If you don't have a GP, our NP will explain how any abnormal lab results are handled at your onboarding appointment. At the end of the program, your prescriptions can be renewed for one year directly through our clinic.</p></div></div>
+        <div class="faq-item"><button class="faq-question">I'm not sure I'm in menopause. Is this program for me?<span class="faq-icon">+</span></button><div class="faq-answer"><p>That's one of the most common things we hear. You don't need a diagnosis to book. Many women come in unsure whether what they're experiencing is perimenopause, menopause, thyroid-related, or something else. That's exactly what the comprehensive assessment is for — our NP will figure out the rest.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Is the bloodwork really covered by OHIP?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. All baseline bloodwork ordered through this program is OHIP-covered. Your NP prepares the requisition, and you take it to a LifeLabs or Dynacare near you. There is no additional charge for these tests.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Why isn't the program itself covered by OHIP?<span class="faq-icon">+</span></button><div class="faq-answer"><p>OHIP covers the bloodwork we order. But it doesn't fund the kind of extended, specialized care this program provides — a 60-minute consultation, body composition testing, a dedicated care coordinator, a written treatment plan, and structured follow-up. That level of service simply isn't resourced in the public system right now, and that's exactly why this program exists.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Can I claim this on my insurance or taxes?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Many extended health plans cover Nurse Practitioner visits. We provide a proper receipt with the NP's registration number that you can submit. Some patients also claim it through a Health Spending Account, and it may qualify as a medical expense on your taxes. We recommend checking with your benefits provider or accountant.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Can't my family doctor do this?<span class="faq-icon">+</span></button><div class="faq-answer"><p>They can prescribe hormone therapy — and many do. The difference is time and focus. Most family doctors have about ten minutes per visit and limited training specifically in menopause care. Our NP spends a full hour with you, focuses exclusively on hormone health, runs a comprehensive panel, and follows up multiple times over three months. We work alongside your doctor, not instead of them.</p></div></div>
+        <div class="faq-item"><button class="faq-question">What if it doesn't work?<span class="faq-icon">+</span></button><div class="faq-answer"><p>That's exactly why the program has built-in follow-ups. At each visit, the NP reviews your response and adjusts your treatment — different dose, different delivery method, adding or removing something. If HRT isn't right for you, there are non-hormonal options we can explore too. The goal is to find what works for your body. That's the whole point of a program versus a single appointment.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Are the hormones safe?<span class="faq-icon">+</span></button><div class="faq-answer"><p>We use Health Canada-approved, body-identical hormones — estradiol and micronized progesterone — which are chemically identical to what your body used to produce. Current evidence shows that for most women who start within ten years of menopause, the benefits significantly outweigh the risks. Your NP will review your personal risk profile in detail at your consultation and ensure any plan is safe and appropriate for you.</p></div></div>
+        <div class="faq-item"><button class="faq-question">Can follow-up appointments be done virtually?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Your first follow-up can be done virtually or in-person. The final follow-up is recommended in-person because it includes your second InBody body composition scan to measure your progress over the program.</p></div></div>
       </div>
     </div>
   </section>
@@ -686,14 +608,9 @@
       <div class="cta-text">
         <div class="section-heading">Start your journey to <em>feeling like yourself</em> again</div>
         <p class="section-subtext">A free intro call with our care coordinator takes fifteen minutes. No commitment. No pressure. Just a conversation about what you're going through and whether the protocol is right for you.</p>
-        <a href="https://book.beoptimal.ca/" class="btn-cta">
-          Book a free intro call
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <a href="https://book.beoptimal.ca/" class="btn-cta">Book a free intro call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <div class="cta-image">
-        <img src="images/clinic-lounge.jpg" alt="Optimal clinic patient lounge">
-      </div>
+      <div class="cta-image"><img src="images/clinic-lounge.jpg" alt="Optimal clinic patient lounge"></div>
     </div>
   </section>
 
@@ -701,14 +618,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="nav-logo">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="12" cy="12" r="5.5" fill="white"/>
-            <circle cx="28" cy="12" r="5.5" fill="white"/>
-            <circle cx="12" cy="28" r="5.5" fill="white"/>
-            <circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/>
-          </svg>
-        </div>
+        <div class="nav-logo"><svg viewBox="0 0 40 40" fill="none"><circle cx="12" cy="12" r="5.5" fill="white"/><circle cx="28" cy="12" r="5.5" fill="white"/><circle cx="12" cy="28" r="5.5" fill="white"/><circle cx="28" cy="28" r="5.5" fill="white" opacity="0.4"/></svg></div>
         <p>Optimal Health Clinic<br>A private clinic built for personalized and preventative health.</p>
       </div>
       <div class="footer-col">
@@ -719,43 +629,35 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <p>Optimal Family Health Clinic<br>630 Huronia Rd, Unit 7<br>Barrie, ON L4N 9Y2</p>
-        <p style="margin-top: 12px;">
-          Email: <a href="mailto:care@beoptimal.ca" style="display:inline;">care@beoptimal.ca</a><br>
-          Phone: <a href="tel:4373700291" style="display:inline;">(437) 370-0291</a>
-        </p>
+        <p style="margin-top:12px">Email: <a href="mailto:care@beoptimal.ca" style="display:inline">care@beoptimal.ca</a><br>Phone: <a href="tel:4373700291" style="display:inline">(437) 370-0291</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; Optimal 2026</p>
-      <a href="https://www.beoptimal.ca">Privacy Policy</a>
-    </div>
+    <div class="footer-bottom"><p>&copy; Optimal 2026</p><a href="https://www.beoptimal.ca">Privacy Policy</a></div>
   </footer>
 
   <script>
     const stickyCta = document.getElementById('stickyCta');
     const heroSection = document.querySelector('.hero');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { stickyCta.classList.toggle('visible', !entry.isIntersecting); });
-    }, { threshold: 0.1 });
-    observer.observe(heroSection);
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => stickyCta.classList.toggle('visible', !e.isIntersecting));
+    }, { threshold: 0.1 }).observe(heroSection);
 
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
-        const isActive = item.classList.contains('active');
+        const active = item.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
+        if (!active) item.classList.add('active');
       });
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>
-
 </body>
 </html>
