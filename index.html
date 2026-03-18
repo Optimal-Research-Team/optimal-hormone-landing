@@ -24,14 +24,14 @@
     body { font-family: var(--sans); color: var(--text-body); background: var(--cream); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
     /* ── Top Bar ── */
-    .top-bar { background: linear-gradient(135deg, #5a5a5a, #787878); color: white; text-align: center; padding: 10px 20px; font-size: 0.85rem; }
+    .top-bar { background: #2c4e25; color: white; text-align: center; padding: 10px 20px; font-size: 0.85rem; }
     .top-bar a { color: white; font-weight: 600; }
 
     /* ── Floating Nav (beOptimal oval style) ── */
     .nav-wrapper { position: sticky; top: 0; z-index: 100; padding: 12px 24px 0; }
     nav {
       max-width: 1260px; margin: 0 auto;
-      background: rgba(36,53,36,0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      background: rgba(0,0,0,0.35); backdrop-filter: blur(36px); -webkit-backdrop-filter: blur(36px);
       border-radius: 60px; padding: 12px 14px 12px 24px;
       display: flex; align-items: center; justify-content: space-between;
       box-shadow: 0 4px 24px rgba(0,0,0,0.12);
@@ -44,8 +44,8 @@
     .btn-nav { padding: 10px 20px; border-radius: 50px; font-size: 0.84rem; font-weight: 500; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); cursor: pointer; border: none; white-space: nowrap; }
     .btn-nav-outline { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.25); }
     .btn-nav-outline:hover { background: rgba(255,255,255,0.2); }
-    .btn-nav-filled { background: var(--green-700); color: white; border: 1px solid rgba(255,255,255,0.15); }
-    .btn-nav-filled:hover { background: var(--green-600); }
+    .btn-nav-ghost { background: none; color: rgba(255,255,255,0.7); border: none; padding: 10px 16px; }
+    .btn-nav-ghost:hover { color: white; }
     .btn-nav-primary { background: white; color: var(--green-800); font-weight: 600; }
     .btn-nav-primary:hover { background: var(--cream); }
 
@@ -283,7 +283,7 @@
         <span>Women's Hormone Optimization</span>
       </a>
       <div class="nav-actions">
-        <a href="https://www.beoptimal.ca" class="btn-nav btn-nav-outline">Enhanced Care</a>
+        <a href="https://www.beoptimal.ca" class="btn-nav btn-nav-ghost">← Enhanced Care</a>
         <a href="tel:4373700291" class="btn-nav btn-nav-outline">Request a callback</a>
         <a href="https://book.beoptimal.ca/" class="btn-nav btn-nav-primary">Book a free intro</a>
       </div>
@@ -299,7 +299,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Mature woman practicing yoga in serene setting">
+      <img src="https://images.pexels.com/photos/6293249/pexels-photo-6293249.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Mature woman meditating outdoors in nature">
     </div>
     <div class="hero-content">
       <div class="hero-badge">
