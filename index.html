@@ -121,7 +121,7 @@
     .symptom-card:hover p { max-height: 80px; opacity: 1; margin-top: 10px; }
 
     /* ── Hormone Map Infographic ── */
-    .hormone-map-section { background: var(--cream); }
+    .hormone-map-section { background: var(--cream-dark); }
     .hormone-map-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
     .hormone-map-container {
       max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden;
@@ -144,18 +144,22 @@
     }
 
     /* ── 6-Step Protocol ── */
-    .protocol-section { background: var(--cream); }
+    .protocol-section { background: var(--green-900); }
+    .protocol-section .section-label { color: var(--green-400); }
+    .protocol-section .section-heading { color: white; }
+    .protocol-section .section-heading em { color: var(--green-400); }
+    .protocol-section .section-subtext { color: rgba(255,255,255,0.65); }
     .protocol-intro { text-align: center; max-width: 700px; margin: 0 auto 60px; }
     .protocol-intro .section-subtext { margin: 0 auto; }
     .protocol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
-    .protocol-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color 0.25s ease; }
-    .protocol-card:hover { border-color: var(--green-400); }
-    .protocol-card-header { background: var(--green-600); padding: 8px 20px; text-align: center; }
-    .protocol-card-header span { font-family: var(--sans); font-size: 0.75rem; font-weight: 600; color: white; letter-spacing: 0.06em; text-transform: uppercase; }
+    .protocol-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden; transition: border-color 0.25s ease, background 0.25s ease; }
+    .protocol-card:hover { border-color: var(--green-400); background: rgba(255,255,255,0.1); }
+    .protocol-card-header { background: var(--green-700); padding: 8px 20px; text-align: center; }
+    .protocol-card-header span { font-family: var(--sans); font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.85); letter-spacing: 0.06em; text-transform: uppercase; }
     .protocol-card-body { padding: 28px 24px; }
-    .protocol-card-body .step-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--green-100); line-height: 1; margin-bottom: 6px; }
-    .protocol-card-body h4 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
-    .protocol-card-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+    .protocol-card-body .step-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: rgba(255,255,255,0.12); line-height: 1; margin-bottom: 6px; }
+    .protocol-card-body h4 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: white; margin-bottom: 8px; }
+    .protocol-card-body p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.55; }
 
     /* ── What's Included ── */
     .included-section { background: white; }
@@ -406,7 +410,7 @@
   <section class="hormone-map-section">
     <div class="section-inner">
       <div class="hormone-map-header">
-        <div class="section-label">Evidence-based</div>
+        <div class="section-label">Your body is changing</div>
         <div class="section-heading">The biology <em>behind your symptoms</em></div>
         <p class="section-subtext">Your hormones work in concert. When one or more shift — as they naturally do through perimenopause and beyond — the effects ripple across your whole wellbeing.</p>
       </div>
@@ -429,8 +433,8 @@
           </g>
 
           <!-- Column headers -->
-          <text x="156" y="24" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" letter-spacing="2.5" fill="#5db882" fill-opacity="0.75">SYMPTOMS</text>
-          <text x="739" y="24" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" letter-spacing="2.5" fill="#5db882" fill-opacity="0.75">HORMONAL DRIVER</text>
+          <text x="156" y="26" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#5db882" fill-opacity="0.9">SYMPTOMS</text>
+          <text x="739" y="26" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#5db882" fill-opacity="0.9">HORMONAL DRIVER</text>
 
           <!-- Column edge hairlines -->
           <line x1="312" y1="33" x2="312" y2="478" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
