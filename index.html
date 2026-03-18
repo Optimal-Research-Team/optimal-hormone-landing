@@ -88,20 +88,33 @@
     .btn-section { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--green-700); color: white; border-radius: 50px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.25s ease; font-family: var(--sans); }
     .btn-section:hover { background: var(--green-800); transform: translateY(-1px); }
 
-    /* ── Callout ── */
-    .callout-bar { background: var(--green-100); border-left: 4px solid var(--green-600); padding: 20px 28px; border-radius: 0 12px 12px 0; margin-top: 40px; max-width: 640px; }
-    .callout-bar p { font-size: 0.95rem; color: var(--text-dark); line-height: 1.6; }
-    .callout-bar strong { color: var(--green-700); }
-
     /* ── Problem ── */
     .problem-section { background: var(--cream); }
     .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 28px; }
-    .problem-text h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 600; color: var(--text-dark); line-height: 1.25; margin-bottom: 12px; }
     .problem-text p { font-size: 1rem; color: var(--text-body); line-height: 1.7; margin-bottom: 10px; }
     .problem-text p:last-child { margin-bottom: 0; }
     .problem-text p strong { color: var(--text-dark); }
     .problem-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
     .problem-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ── Callout Statement ── */
+    .callout-statement {
+      margin-top: 36px; padding: 36px 40px;
+      background: var(--green-800); border-radius: 16px;
+      position: relative; overflow: hidden;
+    }
+    .callout-statement::before {
+      content: '\201C';
+      position: absolute; top: -20px; left: 28px;
+      font-family: var(--serif); font-size: 9rem;
+      color: rgba(255,255,255,0.07); line-height: 1; pointer-events: none;
+    }
+    .callout-statement p {
+      font-family: var(--serif); font-size: 1.18rem;
+      color: rgba(255,255,255,0.9); line-height: 1.65;
+      position: relative; z-index: 1;
+    }
+    .callout-statement em { color: #a8cfa8; font-style: italic; }
 
     /* ── Symptoms (Lume-inspired, cream bg with sage cards) ── */
     .symptoms-section { background: var(--cream-dark); }
@@ -360,14 +373,13 @@
   <!-- Problem Section -->
   <section class="problem-section">
     <div class="section-inner">
-      <div class="section-label">The reality</div>
+      <div class="section-label">The challenge</div>
       <div class="section-heading">Your body is changing, but you can still <em>feel optimal.</em></div>
       <div class="problem-grid">
         <div class="problem-text">
-          <h3>We're here to fill a gap.</h3>
-          <p>Most family physicians have <strong>10 minutes per visit</strong> and received fewer than a handful of hours of menopause-specific training in medical school. It's not that they don't care—it's that the system wasn't built for this.</p>
-          <div class="callout-bar">
-            <p><strong>It doesn't have to be.</strong> The right assessment, with a clinician who specializes in hormone health, can change the trajectory of this entire chapter of your life.</p>
+          <p>Most family physicians have <strong>10 minutes per visit</strong> and received fewer than a handful of hours of menopause-specific training in medical school. It's not that they don't care — it's that the system wasn't built for this. We're here to fill that gap.</p>
+          <div class="callout-statement">
+            <p><em>It doesn't have to be this way.</em> The right assessment, with a clinician who specializes in hormone health, can change the trajectory of this entire chapter of your life.</p>
           </div>
         </div>
         <div class="problem-image">
