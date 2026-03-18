@@ -93,8 +93,8 @@
     .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: stretch; margin-top: 48px; }
     .problem-text p { font-size: 1.05rem; color: var(--text-body); line-height: 1.78; }
     .problem-text p strong { color: var(--text-dark); }
-    .problem-image { border-radius: 16px; overflow: hidden; }
-    .problem-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .problem-image { border-radius: 16px; overflow: hidden; position: relative; min-height: 0; }
+    .problem-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 
     /* ── Callout Statement ── */
     .callout-statement {
