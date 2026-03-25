@@ -126,28 +126,22 @@
     .symptom-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.5; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin 0.35s ease, opacity 0.35s ease; opacity: 0; margin-top: 0; }
     .symptom-card:hover p { max-height: 80px; opacity: 1; margin-top: 10px; }
 
-    /* ── Hormone Map Infographic ── */
-    .hormone-map-section { background: white; }
-    .hormone-map-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
-    .hormone-map-container {
-      max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden;
-      box-shadow: 0 24px 64px rgba(12,28,12,0.24), 0 4px 16px rgba(12,28,12,0.1);
+    /* ── HRT Symptom Tags (Wellnesshaus-elevated) ── */
+    .hrt-section { background: white; }
+    .hrt-grid { display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: center; }
+    .hrt-content .section-heading { margin-bottom: 16px; }
+    .hrt-content .section-subtext { margin-bottom: 36px; }
+    .symptom-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .symptom-tag {
+      background: transparent; border: 1.5px solid var(--sage);
+      color: var(--text-dark); padding: 9px 18px; border-radius: 100px;
+      font-size: 0.76rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; cursor: default;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
-    .hormone-map-svg { width: 100%; height: auto; display: block; }
-    .infographic-citation {
-      text-align: center; font-size: 0.73rem; color: var(--text-muted); font-style: italic;
-      margin: 22px auto 0; max-width: 640px; line-height: 1.6;
-    }
-    @keyframes revealPath { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
-    .hormone-map-svg path {
-      stroke-dasharray: 1000; stroke-dashoffset: 1000;
-      animation: revealPath 1s ease forwards; animation-play-state: paused;
-    }
-    .hormone-map-section.in-view .hormone-map-svg path { animation-play-state: running; }
-    @media (max-width: 740px) {
-      .hormone-map-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .hormone-map-svg { width: 740px; min-width: 740px; }
-    }
+    .symptom-tag:hover { background: var(--green-600); border-color: var(--green-600); color: white; }
+    .hrt-photo { border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; position: relative; }
+    .hrt-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 
     /* ── 6-Step Protocol ── */
     .protocol-section { background: var(--cream); }
@@ -316,6 +310,8 @@
       section { padding: 70px 24px; }
       .hero-content { padding: 60px 24px; }
       .problem-grid, .cta-split { grid-template-columns: 1fr; gap: 40px; }
+      .hrt-grid { grid-template-columns: 1fr; gap: 0; }
+      .hrt-photo { aspect-ratio: 4/3; order: -1; margin-bottom: 40px; }
       .symptoms-grid, .benefits-grid { grid-template-columns: 1fr; }
       .protocol-steps { max-width: 100%; }
       .step-content { padding-bottom: 32px; }
@@ -451,135 +447,38 @@
     </div>
   </section>
 
-  <!-- Hormone Biology Infographic -->
-  <section class="hormone-map-section">
+  <!-- HRT Symptom Tags (Wellnesshaus-elevated) -->
+  <section class="hrt-section">
     <div class="section-inner">
-      <div class="hormone-map-header">
-        <div class="section-label">Your body is changing</div>
-        <div class="section-heading">The biology <em>behind your symptoms</em></div>
-        <p class="section-subtext">Your hormones work in concert. When one or more shift — as they naturally do through perimenopause and beyond — the effects ripple across your whole wellbeing.</p>
+      <div class="hrt-grid">
+        <div class="hrt-content">
+          <div class="section-label">Understanding your symptoms</div>
+          <h2 class="section-heading">What can <em>hormone therapy</em> help with?</h2>
+          <p class="section-subtext">Hormonal shifts through perimenopause and beyond can affect nearly every system in your body. Many of these symptoms are highly treatable — and often dramatically better with the right support.</p>
+          <div class="symptom-tags">
+            <span class="symptom-tag">Hot flashes &amp; night sweats</span>
+            <span class="symptom-tag">Trouble sleeping</span>
+            <span class="symptom-tag">Brain fog</span>
+            <span class="symptom-tag">Mood changes &amp; anxiety</span>
+            <span class="symptom-tag">Low libido</span>
+            <span class="symptom-tag">Weight &amp; body changes</span>
+            <span class="symptom-tag">Vaginal dryness</span>
+            <span class="symptom-tag">Fatigue &amp; low energy</span>
+            <span class="symptom-tag">Hair &amp; skin changes</span>
+            <span class="symptom-tag">Joint pain &amp; aching</span>
+            <span class="symptom-tag">Period irregularities</span>
+            <span class="symptom-tag">Heart palpitations</span>
+            <span class="symptom-tag">Bone density changes</span>
+            <span class="symptom-tag">Memory lapses</span>
+          </div>
+        </div>
+        <div class="hrt-photo">
+          <img src="images/woman-field.jpg" alt="Woman in a golden field" />
+        </div>
       </div>
-      <div class="hormone-map-container">
-        <svg viewBox="0 0 900 510" xmlns="http://www.w3.org/2000/svg" class="hormone-map-svg" role="img" aria-label="Diagram connecting perimenopause symptoms to their hormonal drivers">
-
-          <!-- Dark background -->
-          <rect width="900" height="510" fill="#2d4a2d"/>
-
-          <!-- Very subtle row markers -->
-          <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="0.5">
-            <line x1="0" y1="62" x2="900" y2="62"/>
-            <line x1="0" y1="117" x2="900" y2="117"/>
-            <line x1="0" y1="172" x2="900" y2="172"/>
-            <line x1="0" y1="227" x2="900" y2="227"/>
-            <line x1="0" y1="282" x2="900" y2="282"/>
-            <line x1="0" y1="337" x2="900" y2="337"/>
-            <line x1="0" y1="392" x2="900" y2="392"/>
-            <line x1="0" y1="447" x2="900" y2="447"/>
-          </g>
-
-          <!-- Column headers -->
-          <text x="156" y="28" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#5db882" fill-opacity="0.9">SYMPTOMS</text>
-          <text x="739" y="28" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#5db882" fill-opacity="0.9">HORMONAL DRIVER</text>
-
-          <!-- Column edge hairlines -->
-          <line x1="312" y1="33" x2="312" y2="478" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
-          <line x1="578" y1="33" x2="578" y2="478" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
-
-          <!-- ─── BEZIER CONNECTIONS ─── -->
-          <!-- Curves: M 312 sy C 440 sy 440 hy 578 hy  (fan through x=440) -->
-
-          <!-- Estrogen #5db882 — hot flashes, brain fog, low libido, muscle/bone -->
-          <path d="M 312 62 C 440 62 440 85 578 85"   stroke="#5db882" stroke-opacity="0.68" stroke-width="1.5" fill="none" style="animation-delay:0s"/>
-          <path d="M 312 117 C 440 117 440 85 578 85"  stroke="#5db882" stroke-opacity="0.55" stroke-width="1.5" fill="none" style="animation-delay:0.07s"/>
-          <path d="M 312 337 C 440 337 440 85 578 85"  stroke="#5db882" stroke-opacity="0.32" stroke-width="1.5" fill="none" style="animation-delay:0.14s"/>
-          <path d="M 312 447 C 440 447 440 85 578 85"  stroke="#5db882" stroke-opacity="0.22" stroke-width="1.5" fill="none" style="animation-delay:0.21s"/>
-
-          <!-- Progesterone #70b8b0 — mood shifts, sleep disruption -->
-          <path d="M 312 172 C 440 172 440 185 578 185" stroke="#70b8b0" stroke-opacity="0.68" stroke-width="1.5" fill="none" style="animation-delay:0.28s"/>
-          <path d="M 312 227 C 440 227 440 185 578 185" stroke="#70b8b0" stroke-opacity="0.58" stroke-width="1.5" fill="none" style="animation-delay:0.35s"/>
-
-          <!-- Testosterone #c8a840 — low libido, fatigue, muscle/bone -->
-          <path d="M 312 337 C 440 337 440 280 578 280" stroke="#c8a840" stroke-opacity="0.68" stroke-width="1.5" fill="none" style="animation-delay:0.42s"/>
-          <path d="M 312 392 C 440 392 440 280 578 280" stroke="#c8a840" stroke-opacity="0.58" stroke-width="1.5" fill="none" style="animation-delay:0.49s"/>
-          <path d="M 312 447 C 440 447 440 280 578 280" stroke="#c8a840" stroke-opacity="0.42" stroke-width="1.5" fill="none" style="animation-delay:0.56s"/>
-
-          <!-- Thyroid #c88040 — brain fog, weight changes, fatigue -->
-          <path d="M 312 117 C 440 117 440 370 578 370" stroke="#c88040" stroke-opacity="0.38" stroke-width="1.5" fill="none" style="animation-delay:0.63s"/>
-          <path d="M 312 282 C 440 282 440 370 578 370" stroke="#c88040" stroke-opacity="0.62" stroke-width="1.5" fill="none" style="animation-delay:0.70s"/>
-          <path d="M 312 392 C 440 392 440 370 578 370" stroke="#c88040" stroke-opacity="0.55" stroke-width="1.5" fill="none" style="animation-delay:0.77s"/>
-
-          <!-- Cortisol #c06060 — mood shifts, sleep disruption, weight changes -->
-          <path d="M 312 172 C 440 172 440 450 578 450" stroke="#c06060" stroke-opacity="0.38" stroke-width="1.5" fill="none" style="animation-delay:0.84s"/>
-          <path d="M 312 227 C 440 227 440 450 578 450" stroke="#c06060" stroke-opacity="0.35" stroke-width="1.5" fill="none" style="animation-delay:0.91s"/>
-          <path d="M 312 282 C 440 282 440 450 578 450" stroke="#c06060" stroke-opacity="0.45" stroke-width="1.5" fill="none" style="animation-delay:0.98s"/>
-
-          <!-- ─── SYMPTOM DOTS (left) ─── -->
-          <g fill="#f0ece4" fill-opacity="0.38">
-            <circle cx="312" cy="62"  r="2.5"/>
-            <circle cx="312" cy="117" r="2.5"/>
-            <circle cx="312" cy="172" r="2.5"/>
-            <circle cx="312" cy="227" r="2.5"/>
-            <circle cx="312" cy="282" r="2.5"/>
-            <circle cx="312" cy="337" r="2.5"/>
-            <circle cx="312" cy="392" r="2.5"/>
-            <circle cx="312" cy="447" r="2.5"/>
-          </g>
-
-          <!-- ─── HORMONE DOTS (right) ─── -->
-          <circle cx="578" cy="85"  r="5.5" fill="#5db882"/>
-          <circle cx="578" cy="185" r="5.5" fill="#70b8b0"/>
-          <circle cx="578" cy="280" r="5.5" fill="#c8a840"/>
-          <circle cx="578" cy="370" r="5.5" fill="#c88040"/>
-          <circle cx="578" cy="450" r="5.5" fill="#c06060"/>
-
-          <!-- ─── SYMPTOM LABELS (right-aligned at x=300) ─── -->
-          <!-- Two-line: primary baseline = y−5, secondary baseline = y+10 -->
-          <!-- Single-line: baseline = y+4 -->
-
-          <text x="300" y="57"  text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Hot flashes</text>
-          <text x="300" y="72"  text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#b0c8b0">night sweats</text>
-
-          <text x="300" y="112" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Brain fog</text>
-          <text x="300" y="127" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#b0c8b0">poor memory</text>
-
-          <text x="300" y="167" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Mood shifts</text>
-          <text x="300" y="182" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#b0c8b0">anxiety</text>
-
-          <text x="300" y="231" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Sleep disruption</text>
-
-          <text x="300" y="286" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Weight changes</text>
-
-          <text x="300" y="332" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Low libido</text>
-          <text x="300" y="347" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#b0c8b0">vaginal dryness</text>
-
-          <text x="300" y="396" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Fatigue</text>
-
-          <text x="300" y="442" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#f0ece4">Muscle loss</text>
-          <text x="300" y="457" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#b0c8b0">bone density</text>
-
-          <!-- ─── HORMONE LABELS (left-aligned at x=590) ─── -->
-          <!-- Two-line: name baseline = y−4, subtitle baseline = y+11 -->
-
-          <text x="590" y="81"  font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#5db882">Estrogen ↓</text>
-          <text x="590" y="96"  font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#a0c0a8">Declining through perimenopause</text>
-
-          <text x="590" y="181" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#70b8b0">Progesterone ↓</text>
-          <text x="590" y="196" font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#a0c0a8">Often the first hormone to drop</text>
-
-          <text x="590" y="276" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#c8a840">Testosterone ↓</text>
-          <text x="590" y="291" font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#a0c0a8">Declines with age &amp; stress</text>
-
-          <text x="590" y="366" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#c88040">Thyroid (T3/T4)</text>
-          <text x="590" y="381" font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#a0c0a8">Often missed on standard panels</text>
-
-          <text x="590" y="446" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#c06060">Cortisol ↑</text>
-          <text x="590" y="461" font-family="Inter, system-ui, sans-serif" font-size="9.5" fill="#a0c0a8">Elevated by chronic stress</text>
-
-        </svg>
-      </div>
-      <p class="infographic-citation">Sources: NAMS 2022 Hormone Therapy Position Statement &middot; Endocrine Society Clinical Practice Guidelines &middot; ACOG Practice Bulletin on Menopausal Hormone Therapy</p>
     </div>
   </section>
+
 
   <!-- 6-Step Protocol -->
   <section class="protocol-section" id="how-it-works">
@@ -950,13 +849,6 @@
       });
     });
 
-    // Hormone map path animation on scroll
-    const hormoneMap = document.querySelector('.hormone-map-section');
-    if (hormoneMap) {
-      new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-      }, { threshold: 0.15 }).observe(hormoneMap);
-    }
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', function(e) {
