@@ -203,8 +203,8 @@
     .comparison-table .check { color: var(--green-600); font-weight: 700; }
     .comparison-table .cross { color: #c0392b; font-weight: 700; }
     .td-detail { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; font-weight: 400; }
-    .td-yes { display: block; font-size: 1.15rem; font-weight: 700; color: var(--green-600); }
-    .td-no  { display: block; font-size: 1.15rem; font-weight: 700; color: #a04040; }
+    .td-yes { display: block; font-weight: 600; color: var(--green-600); }
+    .td-no  { display: block; font-weight: 600; color: #c0392b; }
     .comparison-note { max-width: 600px; margin: 24px auto 0; text-align: center; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
 
     /* ── Benefits / Symptom Relief ── */
@@ -740,11 +740,11 @@
           <th>Standard Referral Clinics</th>
         </tr></thead>
         <tbody>
-          <tr><td>1-Hour Consultation</td><td class="highlight"><span class="td-yes">Yes</span><span class="td-detail">60-minute, whole-person assessment with your NP</span></td><td><span class="td-no">No</span><span class="td-detail">Time-limited 20–30 minute visits</span></td></tr>
-          <tr><td>Guaranteed Continuity of Care</td><td class="highlight"><span class="td-yes">Yes</span><span class="td-detail">The same NP every visit — one provider, full history</span></td><td><span class="td-no">No</span><span class="td-detail">Varies — may involve rotating providers</span></td></tr>
-          <tr><td>Rapid Wait Times</td><td class="highlight"><span class="td-yes">Yes</span><span class="td-detail">Within days — no referral needed</span></td><td><span class="td-no">No</span><span class="td-detail">6–18 months via Ontario referral waitlists</span></td></tr>
-          <tr><td>Body Composition Testing</td><td class="highlight"><span class="td-yes">Yes</span><span class="td-detail">InBody scan included — baseline and 6-month follow-up</span></td><td><span class="td-no">No</span><span class="td-detail">Not included in conventional visits</span></td></tr>
-          <tr><td>Structured Follow-Up</td><td class="highlight"><span class="td-yes">Yes</span><span class="td-detail">Built-in 6-step protocol with NP visits and check-ins</span></td><td><span class="td-no">No</span><span class="td-detail">Varies by scheduling availability</span></td></tr>
+          <tr><td>1-Hour Consultation</td><td class="highlight"><span class="td-yes"><span class="check">&#10003;</span> Yes</span><span class="td-detail">60-minute, whole-person assessment with your NP</span></td><td><span class="td-no"><span class="cross">&#10007;</span> No</span><span class="td-detail">Time-limited 20–30 minute visits</span></td></tr>
+          <tr><td>Guaranteed Continuity</td><td class="highlight"><span class="td-yes"><span class="check">&#10003;</span> Yes</span><span class="td-detail">The same NP every visit — one provider, full history</span></td><td><span class="td-no"><span class="cross">&#10007;</span> No</span><span class="td-detail">Varies — may involve rotating providers</span></td></tr>
+          <tr><td>Rapid Wait Times</td><td class="highlight"><span class="td-yes"><span class="check">&#10003;</span> Yes</span><span class="td-detail">Within days — no referral needed</span></td><td><span class="td-no"><span class="cross">&#10007;</span> No</span><span class="td-detail">6–18 months via Ontario referral waitlists</span></td></tr>
+          <tr><td>Body Composition Testing</td><td class="highlight"><span class="td-yes"><span class="check">&#10003;</span> Yes</span><span class="td-detail">InBody scan included — baseline and 6-month follow-up</span></td><td><span class="td-no"><span class="cross">&#10007;</span> No</span><span class="td-detail">Not included in conventional visits</span></td></tr>
+          <tr><td>Structured Follow-Up</td><td class="highlight"><span class="td-yes"><span class="check">&#10003;</span> Yes</span><span class="td-detail">Built-in 6-step protocol with NP visits and check-ins</span></td><td><span class="td-no"><span class="cross">&#10007;</span> No</span><span class="td-detail">Varies by scheduling availability</span></td></tr>
 
         </tbody>
       </table>
